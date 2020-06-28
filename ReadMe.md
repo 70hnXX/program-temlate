@@ -5,3 +5,4 @@
 `npm link`
 
 ### 使用
+`shazam init`

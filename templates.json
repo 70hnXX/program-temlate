@@ -1,1 +1,6 @@
-{ "tpl": {} }
+{
+    "tpl": {
+        "url": "https://github.com/70hnXX/program-temlate.git",
+        "branch": "master"
+    }
+}
