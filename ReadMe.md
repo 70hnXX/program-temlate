@@ -3,5 +3,11 @@
 
 ### 工作计划
 
-- [X] 脚手架搭建
-- [ ] vue-webApp(使用vue构建的webApp的项目模板)
+- [ ] 脚手架搭建
+- [ ] vue-app(vue构建的webApp)
+- [ ] vue-web(vue构建普通web应用)
+- [ ] vue-admin(vue构建的后台管理系统)
+- [ ] react-web(react全家桶+antd)
+- [ ] react-admin
+- [ ] react-taro(react全家桶+taro)
+- [ ] wechat(小程序)
