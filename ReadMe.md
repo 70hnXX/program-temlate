@@ -4,4 +4,4 @@
 ### 工作计划
 
 - [] 脚手架搭建
-[] vue-webApp(使用vue构建的webApp的项目模板)
+- [] vue-webApp(使用vue构建的webApp的项目模板)
