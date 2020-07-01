@@ -1,21 +1,12 @@
 "use strict";
 
-const exec = require("child_process").exec;
 const co = require("co");
 const clone = require('git-clone')
-const logger = require('tracer').colorConsole()
-const prompt = require("co-prompt");
-const config = require("../templates");
 const inquirer = require('inquirer')
 const shell = require('shelljs')
-// const chalk = require("chalk");
 const {
   chalk,
-  execa,
-  semver,
   log,
-  warn,
-  error,
   logWithSpinner,
   stopSpinner,
 
@@ -70,8 +61,7 @@ module.exports = () => {
         choices: [
           {
             name: 'web-mobile',
-            value: '-app'
-          },
+            value: '-app'          },
           {
             name: 'web-pc',
             value: '-web'

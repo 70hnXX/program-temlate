@@ -1,17 +1,14 @@
 {
     "name": "shazam-cli",
     "dependencies": {
-        "chalk": "^1.1.3",
         "co": "^4.6.0",
-        "co-prompt": "^1.0.0",
         "commander": "^2.9.0",
         "@vue/cli-shared-utils": "^4.4.6",
         "inquirer": "^7.1.0",
         "clone": "^2.1.2",
         "git": "^0.1.5",
         "git-clone": "^0.1.0",
-        "shelljs": "^0.8.3",
-        "tracer": "^0.9.8"
+        "shelljs": "^0.8.3"
     },
     "bin": {
         "shazam": "bin/scion"
