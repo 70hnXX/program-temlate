@@ -6,7 +6,8 @@
         "co-prompt": "^1.0.0",
         "commander": "^2.9.0",
         "@vue/cli-shared-utils": "^4.4.6",
-        "inquirer": "^7.1.0"
+        "inquirer": "^7.1.0",
+        "clone": "^2.1.2"
     },
     "bin": {
         "shazam": "bin/scion"
