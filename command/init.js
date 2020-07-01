@@ -95,6 +95,10 @@ module.exports = () => {
         message: `选择使用场景:`,
         choices: [
           {
+            name: 'web-pc',
+            value: '-web'
+          },
+          {
             name: 'web-admin',
             value: '-admin'
           },
