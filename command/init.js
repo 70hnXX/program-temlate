@@ -31,10 +31,7 @@ const {
 
 module.exports = () => {
   co(async function () {
-    // 处理用户输入
-    // let tplName = yield prompt("Template name: ");
-    // let projectName = yield prompt("Project name: ");
-    let name = ''
+    let name = '' // 项目名
     let branch = '' // 分支
     // 项目名
     let projectName = await inquirer.prompt({
@@ -120,31 +117,24 @@ module.exports = () => {
       process.exit();
     }
     let pwd = shell.pwd() // 当前路径
-    // let cmdStr = `mkdir ${name} && cd ${name} && git clone https://github.com/70hnXX/program-temlate.git && git checkout ${branch}`;
     log(`✨  Invoking generators...`)
     setTimeout(function() {
       log(`⚙\u{fe0f}   Generating. This might take a while...`)
     },500)
-    clone(`https://gitee.com/Johnwuyang/program-temlate.git`,pwd + `/${name}`, {checkout:branch}, function (e) {
+    try {
+      clone(`https://gitee.com/Johnwuyang/program-temlate.git`,pwd + `/${name}`, {checkout:branch}, function (e) {
         shell.rm('-rf', pwd + `/${name}/.git`)
         log(
-          `👉  Get started with the following commands:\n\n` +
+          `🌈   Get started with the following commands:\n\n` +
           chalk.cyan(` ${chalk.gray('$')} cd ${name}\n`) +
           chalk.cyan(` ${chalk.gray('$')} npm i\n`) +
           chalk.cyan(` ${chalk.gray('$')} npm run serve\n`)
         )
         process.exit();
       })
-    // exec(cmdStr, (error, stdout, stderr) => {
-    //   if (error) {
-    //     // console.log(error);
-    //     process.exit();
-    //   }
-    //   shell.rm('-rf', `.git`)
-    //   shell.rm('-rf', `program-temlate`)
-    //   // console.log(chalk.green("\n √ Generation completed!"));
-    //   // console.log(`\n cd ${projectName} && npm install \n`);
-    //   process.exit();
-    // });
+    } catch(e) {
+      console.log(e)
+      process.exit();
+    }
   });
 };
