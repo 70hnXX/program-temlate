@@ -116,20 +116,23 @@ module.exports = () => {
       type: 'confirm',
       message: '确认新建一个' + branch + '类型的项目?'
     })
-    console.log(confirmConfig)
     if (!confirmConfig.confirmConfig) {
       process.exit();
     }
     let pwd = shell.pwd() // 当前路径
     // let cmdStr = `mkdir ${name} && cd ${name} && git clone https://github.com/70hnXX/program-temlate.git && git checkout ${branch}`;
-    log(`🚀 starting generate project...`)
+    log(`✨  Invoking generators...`)
     setTimeout(function() {
-      log('🐌 get reource from remote')
+      log(`⚙\u{fe0f}   Generating. This might take a while...`)
     },500)
-    // gitee https://gitee.com/Johnwuyang/program-temlate.git
     clone(`https://gitee.com/Johnwuyang/program-temlate.git`,pwd + `/${name}`, {checkout:branch}, function (e) {
         shell.rm('-rf', pwd + `/${name}/.git`)
-        // logger.info('done enjoy ╭(●｀∀´●)╯')
+        log(
+          `👉  Get started with the following commands:\n\n` +
+          chalk.cyan(` ${chalk.gray('$')} cd ${name}\n`) +
+          chalk.cyan(` ${chalk.gray('$')} npm i\n`) +
+          chalk.cyan(` ${chalk.gray('$')} npm run serve\n`)
+        )
         process.exit();
       })
     // exec(cmdStr, (error, stdout, stderr) => {
