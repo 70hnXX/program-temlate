@@ -25,35 +25,35 @@ program
 program
 
     .usage('<command>')
-program
+// program
 
-    .command('add')
+//     .command('add')
 
-.description('Add a new template')
+// .description('Add a new template')
 
-.alias('a')
+// .alias('a')
 
-.action(() => {
+// .action(() => {
 
-    require('../command/add')()
+//     require('../command/add')()
 
-})
+// })
 
 
 
-program
+// program
 
-    .command('list')
+//     .command('list')
 
-.description('List all the templates')
+// .description('List all the templates')
 
-.alias('l')
+// .alias('l')
 
-.action(() => {
+// .action(() => {
 
-    require('../command/list')()
+//     require('../command/list')()
 
-})
+// })
 
 
 
@@ -73,19 +73,19 @@ program
 
 
 
-program
+// program
 
-    .command('delete')
+//     .command('delete')
 
-.description('Delete a template')
+// .description('Delete a template')
 
-.alias('d')
+// .alias('d')
 
-.action(() => {
+// .action(() => {
 
-    require('../command/delete')()
+//     require('../command/delete')()
 
-})
+// })
 
 program.parse(process.argv)
 
