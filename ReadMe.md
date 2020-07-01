@@ -3,7 +3,7 @@
 
 ### 工作计划
 
-- [ ] 脚手架搭建
+- [ x ] 脚手架搭建
 - [ ] vue-app(vue构建的webApp)
 - [ ] vue-web(vue构建普通web应用)
 - [ ] vue-admin(vue构建的后台管理系统)
@@ -11,3 +11,6 @@
 - [ ] react-admin
 - [ ] react-taro(react全家桶+taro)
 - [ ] wechat(小程序)
+
+### 更新日志
+2020-7-1: 完成了脚手架的搭建
