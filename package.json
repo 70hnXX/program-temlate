@@ -1,5 +1,5 @@
 {
-    "name": "shazam-cli",
+    "name": "yummy-cli",
     "dependencies": {
         "co": "^4.6.0",
         "commander": "^2.9.0",
@@ -11,6 +11,7 @@
         "shelljs": "^0.8.3"
     },
     "bin": {
-        "shazam": "bin/scion"
+        "yummy": "bin/scion",
+        "y": "bin/scion"
     }
 }
