@@ -2,12 +2,12 @@
 
 const exec = require("child_process").exec;
 const co = require("co");
-// const clone = require('git-clone')
-// const log = require('tracer').colorConsole()
+const clone = require('git-clone')
+const logger = require('tracer').colorConsole()
 const prompt = require("co-prompt");
 const config = require("../templates");
 const inquirer = require('inquirer')
-// const shell = require('shelljs')
+const shell = require('shelljs')
 // const chalk = require("chalk");
 const {
   chalk,
@@ -111,28 +111,37 @@ module.exports = () => {
       branch += situation.situation
     }
     // 确认
-    // 项目名
     let confirmConfig = await inquirer.prompt({
       name: 'confirmConfig',
       type: 'confirm',
       message: '确认新建一个' + branch + '类型的项目?'
     })
     console.log(confirmConfig)
-    let cmdStr = `mkdir ${name} && git clone https://github.com/70hnXX/program-temlate.git && cd ${name} && git checkout ${branch}`;
-    log(`✨  Creating project in projectName`)
-
-    // clone(`https://gitee.com/Johnwuyang/vicetone-cli-fontend.git`, pwd + `/${project}`, null, function () {
-    //     shell.rm('-rf', pwd + `/${project}/.git`)
-    //     log.info('done enjoy ╭(●｀∀´●)╯')
-    //   })
-    exec(cmdStr, (error, stdout, stderr) => {
-      if (error) {
-        console.log(error);
-        process.exit();
-      }
-      console.log(chalk.green("\n √ Generation completed!"));
-      console.log(`\n cd ${projectName} && npm install \n`);
+    if (!confirmConfig.confirmConfig) {
       process.exit();
-    });
+    }
+    let pwd = shell.pwd() // 当前路径
+    // let cmdStr = `mkdir ${name} && cd ${name} && git clone https://github.com/70hnXX/program-temlate.git && git checkout ${branch}`;
+    log(`🚀 starting generate project...`)
+    setTimeout(function() {
+      log('🐌 get reource from remote')
+    },500)
+    // gitee https://gitee.com/Johnwuyang/program-temlate.git
+    clone(`https://gitee.com/Johnwuyang/program-temlate.git`,pwd + `/${name}`, {checkout:branch}, function (e) {
+        shell.rm('-rf', pwd + `/${name}/.git`)
+        // logger.info('done enjoy ╭(●｀∀´●)╯')
+        process.exit();
+      })
+    // exec(cmdStr, (error, stdout, stderr) => {
+    //   if (error) {
+    //     // console.log(error);
+    //     process.exit();
+    //   }
+    //   shell.rm('-rf', `.git`)
+    //   shell.rm('-rf', `program-temlate`)
+    //   // console.log(chalk.green("\n √ Generation completed!"));
+    //   // console.log(`\n cd ${projectName} && npm install \n`);
+    //   process.exit();
+    // });
   });
 };
