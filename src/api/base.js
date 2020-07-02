@@ -6,10 +6,10 @@ import {
 import {
     MessageBox,
     Loading,
-    Message
 } from 'element-ui'
 import qs from 'qs'
 import router from '../router/index'
+import code from '../config/code.js'
 let loadOption = {
     fullscreen: true,
     lock: true,
@@ -63,17 +63,16 @@ const allowRequest = function(reqList, url) {
 }
 
 service.interceptors.request.use(config => {
-    if (config.url.indexOf('task/listCountBy') == -1 && config.url.indexOf("task/getAllService") == -1) {
-        Loading.service(loadOption)
-    }
-    // setTimeout(function() {
-    //     Loading.service(loadOption).close()
-    // }, 5000)
+    // 不需要弹出loading的可以用下面方式过滤
+    // if (config.url.indexOf('task/listCountBy') == -1 && config.url.indexOf("task/getAllService") == -1) {
+    //     Loading.service(loadOption)
+    // }
+
     if (getToken()) {
         config.headers['accessToken'] = getToken()
-        config.headers['projectId'] = "b54657268dc2416a8fd4748a10c1f441" // 朱俊杰说的产品id是固定的
-            // console.log( config.headers['authorization'])
+        config.headers['projectId'] = "b54657268dc2416a8fd4748a10c1f441"
     }
+
     if (config.method === 'get' || config.method === 'post') {
         //如果是get或post请求，且params是数组类型如arr=[1,2]，则转换成arr=1&arr=2
         config.paramsSerializer = function(params) {
@@ -136,46 +135,6 @@ function showMessage(msg) {
     }
 }
 
-function showMessage2(msg, code) {
-    if (showModal) {
-        showModal = false
-        MessageBox.alert(msg, '提示', {
-            type: "warning",
-            dangerouslyUseHTMLString: true,
-            message: '<pre style="max-height:350px;overflow-y: auto;">' + msg + '</pre>',
-            customClass: 'customClass',
-            callback: (action) => {
-                if (code === 700) { //token过期
-                    //清除失效token
-                    removeToken();
-                    //跳转登录页
-                    location.reload()
-                }
-                showModal = true
-            }
-        });
-    }
-}
-
-// 跳转UE
-function onJump(msg) {
-    if (showModal) {
-        showModal = false
-        MessageBox.alert(msg, '提示', {
-            type: "warning",
-            dangerouslyUseHTMLString: true,
-            message: '<pre style="max-height:350px;overflow-y: auto;">' + msg + '</pre>',
-            customClass: 'customClass',
-            callback: () => {
-                // 清除失效token
-                removeToken();
-                //跳转登录页
-                window.location.href = "https://www.youedata.com/views/channelPage/qualityAssessment.html";
-                showModal = true
-            }
-        });
-    }
-}
 
 service.interceptors.response.use(
     response => {
@@ -185,14 +144,14 @@ service.interceptors.response.use(
         if (!res.code) {
             return res
         } else {
-            if (res.code == 11030113) {
+            if (res.code == code.unauthorized) {
                 //跳转登录页
                 router.push({
                     path: '/login',
                 })
                 showMessage("登录信息已过期,请重新登录")
             }
-            if (res.code !== 200) {
+            if (res.code !== code.success) {
                 showMessageNoJump(res.message)
             }
             return res
