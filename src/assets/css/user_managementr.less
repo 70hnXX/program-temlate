@@ -1,0 +1,83 @@
+//用户管理css样式
+.user_container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 40px);
+
+  .user_content {
+    flex: auto;
+    margin-top: 14px;
+    background-color: #fff;
+
+    .user_header {
+      margin-bottom: 20px;
+      display: flex;
+      justify-items: center;
+      justify-content: space-between;
+      // 选中值颜色
+      /deep/ .el-select {
+        width: 106px !important;
+      }
+
+      /deep/ .el-input__inner {
+        border-color: rgba(77, 114, 231, 1) !important;
+      }
+
+      /deep/ .el-input__suffix {
+        right: 0 !important;
+        width: 40px !important;
+        background: rgba(77, 114, 231, 1) !important;
+        border-radius: 0 4px 4px 0 !important;
+      }
+
+      /deep/ .el-select .el-input .el-select__caret {
+        color: #fff !important;
+        border-color: rgba(77, 114, 231, 1) !important;
+      }
+
+      /deep/ .el-select .el-input.is-focus .el-input__inner {
+        border-color: rgba(77, 114, 231, 1) !important;
+      }
+    }
+
+    // 表格样式
+    .user-table-wrapper {
+      border: 1px solid rgba(227, 232, 240, 1);
+      border-radius: 4px;
+      border-bottom: transparent;
+
+      // 取消每行移入效果
+      /deep/ .el-table--enable-row-hover .el-table__body tr:hover > td {
+        background: none !important;
+      }
+
+      .enable {
+        color: #51BDBA;
+      }
+
+      .disabled {
+        color: #F9B92C;
+      }
+
+      .cancellation {
+        color: #8992A0;
+      }
+
+      .table_btn {
+        color: #4D72E7;
+        margin-right: 10px;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .table_btn:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+
+
+

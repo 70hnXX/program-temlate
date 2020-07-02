@@ -1,0 +1,80 @@
+.user_info {
+  margin-top: 30px;
+  background-color: #fff;
+
+  .info_header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E3E8F0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #2F3949;
+  }
+
+  .info_content {
+    margin: 0 auto;
+    min-width: 500px;
+    max-width: 500px;
+    overflow: hidden;
+
+    .info_avatar {
+      margin-top: 20px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .upload_btn {
+        display: block;
+        margin-bottom: 18px;
+        width: 86px;
+        height: 26px;
+        line-height: 26px;
+        border: 1px solid #4D72E7;
+        color: #4D72E7;
+        border-radius: 15px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: .2s all;
+
+        &:hover {
+          background-color: #4D72E7;
+          color: #fff;
+        }
+      }
+
+      .el-upload__tip {
+        color: #2F3949;
+        font-size: 12px;
+      }
+    }
+
+    .checkbox_group {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      // /deep/ .el-checkbox:first-child {
+      //   margin-right: 169px;
+      // }
+      /deep/ .el-checkbox{
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .el-select {
+    width: 100%;
+  }
+}
+
+.role_info, .auth_info {
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.user_footer {
+  margin: 40px 0;
+  text-align: center;
+}
