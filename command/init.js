@@ -108,10 +108,7 @@ module.exports = () => {
     }
     let pwd = shell.pwd() // 当前路径
     log(`✨  Invoking generators...`)
-    setTimeout(function() {
-      // ⚙\u{fe0f}   
-      logWithSpinner(`Generating. This might take a while...`)
-    },500)
+    logWithSpinner(`Generating. This might take a while...`)
     try {
       clone(`https://gitee.com/Johnwuyang/program-temlate.git`,pwd + `/${name}`, {checkout:branch}, function (e) {
         shell.rm('-rf', pwd + `/${name}/.git`)
