@@ -25,7 +25,7 @@
       }
     },
     methods: {
-      // 改变每页条数出发
+      // 改变每页条数
       handleSizeChange(val) {
         // console.log(this.page)
         this.page.limit = val
@@ -43,5 +43,4 @@
 </script>
 
 <style scoped>
-  @import "../../assets/css/elenentReset_pagination.less";
 </style>

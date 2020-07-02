@@ -2,6 +2,7 @@
     |-- .browserslistrc
     |-- .gitignore
     |-- babel.config.js
+    |-- directoryList.md
     |-- package-lock.json
     |-- package.json
     |-- ReadMe.md
@@ -49,43 +50,6 @@
         |       |-- pic_opps_nodata.png
         |       |-- user.png
         |       |-- youelogo_white.png
-        |       |-- point
-        |       |   |-- back.png
-        |       |   |-- step-active.png
-        |       |   |-- step_not.png
-        |       |   |-- tag.png
-        |       |-- task
-        |           |-- add.png
-        |           |-- arrow.png
-        |           |-- arrow_active.png
-        |           |-- bq_1.png
-        |           |-- bq_2.png
-        |           |-- bq_3.png
-        |           |-- close.png
-        |           |-- delete.png
-        |           |-- edit.png
-        |           |-- edit_active.png
-        |           |-- fine.png
-        |           |-- gx_1.png
-        |           |-- gx_2.png
-        |           |-- gx_3.png
-        |           |-- pause.png
-        |           |-- qc_1.png
-        |           |-- qc_2.png
-        |           |-- qc_3.png
-        |           |-- share_error.png
-        |           |-- start.png
-        |           |-- task_error.png
-        |           |-- tm_1.png
-        |           |-- tm_2.png
-        |           |-- tm_3.png
-        |           |-- up.png
-        |           |-- wb_1.png
-        |           |-- wb_2.png
-        |           |-- wb_3.png
-        |           |-- zlpj_1.png
-        |           |-- zlpj_2.png
-        |           |-- zlpj_3.png
         |-- components
         |   |-- common
         |   |   |-- leftNav.vue
