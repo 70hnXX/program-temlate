@@ -14,17 +14,18 @@
         "d3-flextree": "^2.1.1",
         "element-ui": "^2.13.0",
         "js-cookie": "^2.2.1",
+        "mddir": "^1.1.1",
         "moment": "^2.24.0",
         "path": "^0.12.7",
+        "sass": "^1.26.5",
         "sass-loader": "^8.0.2",
         "vue": "^2.6.11",
-        "vue-router": "^3.1.5",
-        "vuex": "^3.0.1",
-        "sass": "^1.26.5",
         "vue-cli-plugin-vuetify": "~2.0.5",
+        "vue-router": "^3.1.5",
         "vue-template-compiler": "^2.6.11",
         "vuetify": "^2.2.26",
-        "vuetify-loader": "^1.4.3"
+        "vuetify-loader": "^1.4.3",
+        "vuex": "^3.0.1"
     },
     "devDependencies": {
         "@vue/cli-plugin-babel": "^4.2.0",
