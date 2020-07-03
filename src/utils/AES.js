@@ -1,9 +1,9 @@
 import CryptoJS from "crypto-js";
 //秘钥
-const CRYPTOJSKEY = stringToByte("youedata12345678");
+const CRYPTOJSKEY = stringToByte("encryptionString");
 // 优易网加密
 export const Encryption = data => {
-  let key = CryptoJS.enc.Utf8.parse('youedata12345678')
+  let key = CryptoJS.enc.Utf8.parse('encryptionString')
   let iv = CryptoJS.enc.Utf8.parse(data)
   let encryptResult = CryptoJS.AES.encrypt(iv, key, {
     iv: key,
@@ -15,7 +15,7 @@ export const Encryption = data => {
   )
 }
 export const EncryptionWithoutEncode = data => {
-  let key = CryptoJS.enc.Utf8.parse('youedata12345678')
+  let key = CryptoJS.enc.Utf8.parse('encryptionString')
   let iv = CryptoJS.enc.Utf8.parse(data)
   let encryptResult = CryptoJS.AES.encrypt(iv, key, {
     iv: key,
