@@ -5,6 +5,11 @@ vue全家桶+element-ui构建后台管理系统
 
 先`npm i`安装项目所需要的依赖,然后`npm run serve`启动项目
 
+### 需要注意的事情
+- 开发前请先看下下面的项目结构,了解下配置.
+- vue.config.js默认开启了gzip压缩和打包屏蔽了console
+- public/lib/env.js 配置了不同的ip,支持项目中请求不同的ip下的接口
+
 ### 项目结构
 
 ```
