@@ -18,5 +18,10 @@ module.exports = {
             config.resolve.alias
                 .set('@', path.join(__dirname, 'src'))//设置别名
     },
-    transpileDependencies: ['vue-clamp', 'resize-detector']
+    transpileDependencies: ['vue-clamp', 'resize-detector'],
+    configureWebpack: (config)=> { // 打包屏蔽console
+        if (process.env.NODE_ENV === 'production') {
+            config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true
+        }
+    }
 }
