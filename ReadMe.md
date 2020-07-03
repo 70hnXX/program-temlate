@@ -1,4 +1,5 @@
 ### vue-admin 项目
+vue全家桶+element-ui构建后台管理系统
 
 ### 启动项目
 

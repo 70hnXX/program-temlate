@@ -9,6 +9,7 @@
     "dependencies": {
         "@hellowuxin/mindmap": "^1.6.2",
         "axios": "^0.19.2",
+        "compression-webpack-plugin": "^4.0.0",
         "core-js": "^3.6.4",
         "crypto-js": "^4.0.0",
         "d3-flextree": "^2.1.1",
