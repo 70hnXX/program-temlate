@@ -11,3 +11,6 @@
 - [ ] react-admin
 - [ ] react-taro(react全家桶+taro)
 - [ ] wechat(小程序)
+
+### 更新日志
+2020-7-1: 完成了脚手架的搭建
