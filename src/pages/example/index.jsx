@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 // import { testAction } from '@/redux/actions/common'
 import { testAction } from '../../redux/actions/common'
-import styles from './index.modules.scss'
+import styles from './index.module.scss'
 import { Button } from '@tarojs/components'
 
 function mapStateToProps(state) {
@@ -65,6 +65,7 @@ export default class Index extends PureComponent {
   render() {
     const { baseListConfig } = this.state
     const { testText } = this.props
+    console.log(styles)
     return (
       <View className='index'>
         <View>组件示例:</View>
