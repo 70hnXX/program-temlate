@@ -1,5 +1,22 @@
 import React, { PureComponent } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+// import { testAction } from '@/redux/actions/common'
+import { testAction } from '../../redux/actions/common'
 import styles from './index.modules.scss'
+import { Button } from '@tarojs/components'
+
+function mapStateToProps(state) {
+  return {
+    testText: state.common.testText
+  }
+}
+function mapDispatchToProps(dispatch) {
+  return {
+    test: bindActionCreators(testAction, dispatch)
+  }
+}
+@connect(mapStateToProps, mapDispatchToProps)
 
 export default class Index extends PureComponent {
   constructor(props) {
@@ -25,6 +42,10 @@ export default class Index extends PureComponent {
 
   componentDidHide() { }
 
+  changeTextValue = () => {
+    this.props.test('修改后的值')
+  }
+
   onGetUserInfo = (e) => {
     if (!e.detail.userInfo) {
       Taro.showToast({
@@ -43,6 +64,7 @@ export default class Index extends PureComponent {
   }
   render() {
     const { baseListConfig } = this.state
+    const { testText } = this.props
     return (
       <View className='index'>
         <View>组件示例:</View>
@@ -52,6 +74,13 @@ export default class Index extends PureComponent {
           <Text className={styles.title}>按钮示例:</Text>
           <Button>普通按钮</Button>
           <Button openType='getUserInfo' onGetUserInfo={this.onGetUserInfo}>微信账号登录测试(小程序中)</Button>
+        </View>
+        <View>
+          <Text className={styles.title}>redux示例:</Text>
+          <View>
+            <Button onClick={() => this.changeTextValue()}>修改redux里面的数据</Button>
+            <Text className={styles.title}>redux里的值:{testText}</Text>
+          </View>
         </View>
         <View>
           <Text className={styles.title}>滚动加载容器示例:</Text>
