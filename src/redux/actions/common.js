@@ -14,7 +14,6 @@ function testFuction(data) {
 
 export function testAction(data) {
   return function (dispatch) {
-    //本地保存用户信息
     dispatch(testFuction(data))
   }
 }
