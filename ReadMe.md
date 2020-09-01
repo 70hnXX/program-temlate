@@ -9,9 +9,10 @@
 - [X] vue-admin(vue构建的后台管理系统)
 - [ ] react-web(react全家桶+antd)
 - [ ] react-admin
-- [ ] react-taro(react全家桶+taro)
+- [x] react-taro(react全家桶+taro)
 - [ ] wechat(小程序)
 
 ### 更新日志
 2020-7-1: 完成了脚手架的搭建
 2020-7-2: 完成了vue-admin模板的创建
+2020-9-1: 完成了react-taro模板的创建
