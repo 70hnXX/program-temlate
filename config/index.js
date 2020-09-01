@@ -14,7 +14,7 @@ const config = {
   alias: {
     '@/components': path.resolve(__dirname, '..', 'src/components'),
     '@/container': path.resolve(__dirname, '..', 'src/container'),
-    '@/actions': path.resolve(__dirname, '..', 'src/actions'),
+    '@/redux/actions': path.resolve(__dirname, '..', 'src/redux/actions'),
     '@/utils': path.resolve(__dirname, '..', 'src/utils'),
     '@/const': path.resolve(__dirname, '..', 'src/const'),
   },

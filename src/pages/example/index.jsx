@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-// import { testAction } from '@/redux/actions/common'
-import { testAction } from '../../redux/actions/common'
+import { testAction } from '@/redux/actions/common'
 import styles from './index.module.scss'
 import { Button } from '@tarojs/components'
 

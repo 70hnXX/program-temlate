@@ -28,3 +28,4 @@ Taro v3.0.8
 
 ## 改动的地方
 1. taro的所有组件,全都在src/global.js引入了,并对View/Text/Image/Button这三个常用组件做了扩展
+2. 修改了config/index.js,开启css Module,以及alias
