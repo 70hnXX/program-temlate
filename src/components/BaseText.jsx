@@ -8,9 +8,9 @@ function BaseText({ children, style, n, c, b, h, ft, className }) {
   //统一基础色，W白色。B蓝色。G灰色。O橘色。R红色
   let colors = { W: '#fff', B: '#2778FF', G: '#999', O: '#FA6400', R: '#E02020' }
 
-  if (ft) fontStyle.fontSize = Taro.pxTransform(ft)
+  if (ft) fontStyle.fontSize = Taro.pxTransform(ft,'750px')
   if (c) fontStyle.color = colors[c]
-  if (h) fontStyle.lineHeight = Taro.pxTransform(h)
+  if (h) fontStyle.lineHeight = Taro.pxTransform(h,'750px')
   if (b) fontStyle.fontWeight = 'bold'
   if (style) fontStyle = { ...fontStyle, ...style }
   if (n) {
@@ -21,7 +21,6 @@ function BaseText({ children, style, n, c, b, h, ft, className }) {
     fontStyle.wordBreak = 'break-all'
     fontStyle.display = '-webkit-box'
   }
-
   return (
     <Text className={className} style={fontStyle}>{children}</Text>
   );

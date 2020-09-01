@@ -1,6 +1,6 @@
 import { Swiper, SwiperItem, Image, ScrollView, Form, Switch, Input, Textarea, Picker, WebView } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import { BaseText, BaseButton, BaseView } from './components/'
+import { BaseText, BaseButton, BaseView, DataList } from './components/'
 
 /**插件库 */
 global.Taro = Taro
@@ -17,3 +17,4 @@ global.WebView = WebView
 global.Text = BaseText
 global.Button = BaseButton
 global.View = BaseView
+global.DataList = DataList
