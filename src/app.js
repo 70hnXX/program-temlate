@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import './app.scss'
+import './global.js'
 
 class App extends Component {
 

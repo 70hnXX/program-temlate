@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
-import { View, Text } from '@tarojs/components'
+import React, { PureComponent } from 'react'
 import './index.scss'
 
-export default class Index extends Component {
+export default class Index extends PureComponent {
 
   componentWillMount () { }
 
@@ -17,7 +16,7 @@ export default class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Text>Hello world!</Text>
+        <Text c="R" b ft={36}>Text组件示例</Text>
       </View>
     )
   }
