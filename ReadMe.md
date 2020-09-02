@@ -19,7 +19,7 @@
 - [X] vue-admin(vue构建的后台管理系统)
 - [ ] react-web(react全家桶+antd)
 - [ ] react-admin
-- [ ] react-taro(react全家桶+taro)
+- [x] react-taro(react全家桶+taro)
 - [ ] wechat(小程序)
 
 目前仅完成了的模板可以使用,模板根据使用可能会发生改变,以适应新的开发需求
